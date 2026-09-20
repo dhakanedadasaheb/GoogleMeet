@@ -1,8 +1,8 @@
 import { ArrowRightIcon, KeyboardIcon, PlusIcon, ShieldCheckIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { dummyStats, dummyUser } from '../assets/asset'
-import { toast } from 'react-hot-toast'
 
 const Dashboard = () => {
 
@@ -36,11 +36,11 @@ const Dashboard = () => {
   const handleJoinMeeting = (e)=>{
     e.preventDefault()
     const cleanId = joinId.trim()
-    if(!cleanId){
+    if(!/^[a-z]{3}(?:-[a-z]{3}){2}$/.test(cleanId)){
       toast.error("Please enter a valid meeting ID")
       return
     }
-    navigate(`/meeting/${cleanId}`)
+    navigate(`/meeting/${encodeURIComponent(cleanId)}`)
   }
 
 
