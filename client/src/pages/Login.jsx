@@ -1,4 +1,4 @@
-import { SignIn, SignUp, useClerk, useUser } from "@clerk/react"
+import { SignIn, SignUp, useUser } from "@clerk/react"
 import { Navigate } from "react-router-dom"
 
 const Login = ({mode = "login"}) => {

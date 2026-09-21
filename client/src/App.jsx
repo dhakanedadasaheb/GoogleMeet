@@ -4,9 +4,9 @@ import ProtectedLayout from './components/ProtectedLayout'
 import ProtectedRoute from './components/ProtectedRoute'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
-import Sessions from './pages/Sessions'
-import Pricing from './pages/Pricing'
 import MeetingRoom from './pages/MeetingRoom'
+import Pricing from './pages/Pricing'
+import Sessions from './pages/Sessions'
 const App = () => {
   return (
     <>
@@ -19,7 +19,7 @@ const App = () => {
 
       {/* private route */}
       <Route element={<ProtectedRoute/>}>
-        <Route element={< ProtectedLayout/>}>
+        <Route element={<ProtectedLayout/>}>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/sessions' element={<Sessions/>}/>
           <Route path='/pricing' element={<Pricing/>}/>
