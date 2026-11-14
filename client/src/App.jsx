@@ -5,7 +5,6 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import MeetingRoom from './pages/MeetingRoom'
-import Pricing from './pages/Pricing'
 import Sessions from './pages/Sessions'
 const App = () => {
   return (
@@ -22,7 +21,7 @@ const App = () => {
         <Route element={<ProtectedLayout/>}>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/sessions' element={<Sessions/>}/>
-          <Route path='/pricing' element={<Pricing/>}/>
+          {/* <Route path='/pricing' element={<Pricing/>}/> */}
         </Route>
         <Route path='/meeting/:meetingId' element={<MeetingRoom/>}/>
       </Route>

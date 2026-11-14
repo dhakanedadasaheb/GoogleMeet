@@ -16,10 +16,10 @@ const Navbar = () => {
       <div className=" flex items-center gap-6">
         <Link to="/dashboard" className=" flex items-center gap-1.5">
         <img src="/logo.svg" alt="" className=" size-6.5"/>
-        <span className=" text-2xl font-medium tracking-tight text-slate-900 flex items-center">GoogleMeet
+        <span className=" text-2xl font-medium tracking-tight text-slate-900 flex items-center">ConnectMeet
           <span>.</span>
         </span>
-        </Link>
+        </Link> 
 
         {isSignedIn && (
           <nav className=" hidden md:flex items-center gap-1.5 ml-2">
